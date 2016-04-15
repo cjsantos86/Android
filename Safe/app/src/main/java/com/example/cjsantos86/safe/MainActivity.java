@@ -9,10 +9,18 @@ import android.view.TextureView;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.accessibility.AccessibilityManager;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class
+MainActivity extends AppCompatActivity {
+
+    private Button answerYesButton, AnswerNoButton;
+    private EditText usersNameEditText;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,26 +29,11 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        final TextView firstTextView = (TextView) findViewById(R.id.textView);
+        answerYesButton = (Button) findViewById(R.id.answer_yes_Button);
+        answerYesButton = (Button) findViewById(R.id.answer_no_Button);
+        usersNameEditText = (EditText) findViewById(R.id.users_name_Edit_text);
 
-        Button button = (Button) findViewById(R.id.button_1);
 
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                firstTextView.setText("YOU CLICKED");
-            }
-        });
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
     }
 
     @Override
@@ -64,4 +57,23 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-}
+
+    public void onYesButtonClick(View view) {
+
+        String userName= String.valueOf(usersNameEditText.getText());
+
+        String yesResponse = "Its Nice " + userName;
+
+        Toast.makeText(this,yesResponse,Toast.LENGTH_SHORT).show();
+    }
+
+    public void onNoButtonClick(View view) {
+
+        String userName= String.valueOf(usersNameEditText.getText());
+
+        String noResponse = "Its bad " + userName;
+
+        Toast.makeText(this,noResponse,Toast.LENGTH_SHORT).show();
+    }
+    }
+

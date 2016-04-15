@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Seguridad</string>
+    <string name="action_settings">Configuracion</string>
+    <string name="users_quest">Tu estas bien?</string>
+    <string name="yes_button_text">Si</string>
+    <string name="users_answer_1">Llevarnos</string>
+    <string name="no_button_text">No</string>
+    <string name="users_answer_2">No , me recogiera</string>
+    <string name="user_name_EdtText">Su Nombre</string>
+
+</resources>
