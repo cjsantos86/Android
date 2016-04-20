@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">toolBar</string>
+    <string name="action_settings">action_settings</string>
+    <string name="options_exit_text">options_exit_text</string>
+    <string name="enter_name_text_view">Name</string>
+    <string name="enter_botton">Enter</string>
+    <string name="calling_activity_message">the calling activity was</string>
+    <string name="go_get_the_name">Go get the Name</string>
+    <string name="user_name_was">The user name was</string>
+</resources>
